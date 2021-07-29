@@ -13,14 +13,12 @@
     transform: translateZ(0);
     margin: 2px;
     backface-visibility: hidden;
-    position: relative;
     &_active {
-        color: #FFD600;
+        color: $frame-color;
         border-radius: 100%;
-        background-color: #343A40;
+        background-color: $second-color;
       &:before {
         content: '';
-        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
@@ -29,7 +27,7 @@
         transition-property: top, right, bottom, left;
       }
       &:focus:before, &:active:before {
-        border: #FFD600 solid 1px;
+        border: $frame-color solid 1px;
         border-radius: 100%;
         top: -2px;
         right: -2px;

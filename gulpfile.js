@@ -36,19 +36,3 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
 
-function process (source, opts) {
-    const browsers = browserslist(opts.overrideBrowserslist, {
-      stats: opts.stats,
-      path:  opts.file,
-      env:   opts.env
-    });
-    browserslist({
-        server: {
-            baseDir: "src"
-        }
-    })
-    .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false
-    }));
-}

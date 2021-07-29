@@ -1,4 +1,4 @@
-@import 'base/variables';
+
 
 * {
     font-family: 'Montserrat', sans-serif;
@@ -14,6 +14,6 @@ body {
 }
 
 
-
+@import 'base/variables';
 @import 'header.scss';
 @import 'buttons.scss';
