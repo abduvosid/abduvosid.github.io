@@ -1,0 +1,41 @@
+.btn__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .btn__outline {
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    margin: 2px;
+    backface-visibility: hidden;
+    position: relative;
+    &_active {
+        color: #FFD600;
+        border-radius: 100%;
+        background-color: #343A40;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition-duration: 0.3s;
+        transition-property: top, right, bottom, left;
+      }
+      &:focus:before, &:active:before {
+        border: #FFD600 solid 1px;
+        border-radius: 100%;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+      }
+    }
+  }
+  

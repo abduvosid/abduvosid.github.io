@@ -3,7 +3,7 @@
     margin: 0 auto;
     height: 500px;
     background-color: $second-color;
-    .menu{
+/*     .menu{
         &-item {
             position: absolute;
             transform: translateY(280%);
@@ -34,7 +34,7 @@
                 }
             }
         }
-    }
+    } */
     .square {
         position: absolute;
         top: 0;
@@ -52,7 +52,7 @@
     .title {
         position: absolute;
         transform: translateX(27%);
-        margin-top: 53px;
+        margin-top: -20px;
         font-weight: 500;
         font-size: 72px;
         line-height: 88px;
@@ -60,45 +60,13 @@
         
     }
     .subtitle {
-        position: absolute;
+        position: relative;
         display: block;
         font-size: 36px;
         color: #c4c4c4;
-        left: 534px;
-        top: 270px;
+        left: 500px;
+        top: 240px;
         font-family: 'Montaga';
         font-weight: normal;
-    }
-    .catalog {
-        &__tabs {
-            margin-top: 70px;
-            list-style-type: none;
-        }
-        &__tab {
-            width: 150px;
-            height: 30px;
-            border: 3px solid $frame-color; 
-            color: #f0d646;
-            font-size: 15px;
-            font-weight: 400;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: 25px;
-
-            margin: 0 5px;
-            cursor: pointer;
-            transition: 0.5s all;
-            &:hover {
-                box-shadow: 5px 5px 30px #9e06ac;
-            }
-            div {
-
-            }
-            &_active {
-                color: #fff;
-                background-color: $main-color;
-                border: none;
-            }
-        }
     }
 }
