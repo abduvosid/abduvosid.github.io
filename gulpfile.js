@@ -1,10 +1,9 @@
 const gulp        = require('gulp');
 const browserSync = require('browser-sync');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass')); //sass
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require("gulp-rename");
-const browserslist = require('browserslist');
 
 gulp.task('server', function() {
 
@@ -18,12 +17,13 @@ gulp.task('server', function() {
 });
 
 gulp.task('styles', function() {
-    return gulp.src("src/sass/**/*.+(scss|sass)")
-        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    return gulp.src("src/sass/**/*.+(sass|scss)")
+        .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError)) //sass
         .pipe(rename({suffix: '.min', prefix: ''}))
         .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
+            overrideBrowserslist: ["last 5 versions"], //overrideBrowserslist: ["last 5 versions"],
+             //browsers: ['last 2 versions'] 
+            cascade: false  //cascade: true //cascade: false
         }))
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest("src/css"))
@@ -31,8 +31,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-    gulp.watch("src/sass/**/*.+(scss|sass)", gulp.parallel('styles'));
+    gulp.watch("src/sass/**/*.+(sass|scss)", gulp.parallel('styles'));
 });
 
 gulp.task('default', gulp.parallel('watch', 'server', 'styles'));
-

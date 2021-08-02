@@ -1,33 +1,58 @@
 .btn__container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  top: -90px;
+  position: relative;
+  transform: translateX(2px);
+  left: -10px;
+/*   .btn__about {
+    position: relative;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    top: 100px;
+    transform: translateX(4px);
   }
+  .btn__portfolio {
+    position: absolute;
+    bottom: 480px;
+    top: 200px;
+    transform: translateX(2px);
+  }
+  .btn__contacts {
+    position: relative;
+    bottom: 180px;
+    top: 50px;
+    transform: translateX(2px);
+  } */
   .btn__outline {
-    width: 15px;
-    height: 15px;
+    width: 9px;
+    height: 9px;
     border: none;
     border-radius: 100%;
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
-    margin: 2px;
+    margin: 1px;
     backface-visibility: hidden;
+    position: relative;
     &_active {
-        color: $frame-color;
+        background-color:  rgba(255, 255, 255, 0.65);
+        color: #FFD600;
         border-radius: 100%;
-        background-color: $second-color;
       &:before {
         content: '';
+        position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        transition-duration: 0.3s;
+        transition-duration: 0.5s;
         transition-property: top, right, bottom, left;
       }
       &:focus:before, &:active:before {
-        border: $frame-color solid 1px;
+        border: #FFD600 solid 1px;
         border-radius: 100%;
         top: -2px;
         right: -2px;
@@ -36,4 +61,197 @@
       }
     }
   }
-  
+}
+
+
+
+
+
+
+nav {
+  display: inherit;
+  position: relative;
+  bottom: -10px;
+  top: 70px;
+  left: 110px;
+  .btn__box {
+    position: absolute; //            display:flex;
+    display: flex;    //              flex-direction:column;
+    justify-content: flex-start; //   align-items:flex-end;
+    flex-direction: column;
+    transform: translateY(-35%);
+    .btn__circle {
+      width: 9px;
+      height: 9px;
+      border: none;
+      margin: 15px;
+      border-radius: 100%;
+      vertical-align: middle;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      a {
+        position: absolute;
+        font-weight: 500;
+        font-size: 24px;
+  /*    display: flex;
+        position: absolute;
+        justify-content: flex-start;
+        flex-direction: column; */
+        text-decoration: none;
+        color: $text-color;
+        margin-left: 18px;
+        transform: translateY(-7px);
+        line-height: 12px;
+        text-align: right;
+      }
+      &_active {
+          background-color: rgba(255, 255, 255, 0.65);
+          color: #FFD600;
+          border-radius: 100%;
+        &:before {
+          position: absolute;
+          content: '';
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          transition-duration: 0.5s;
+          transition-property: top, right, bottom, left;
+        }
+        &:focus:before, &:active:before {
+          border: #FFD600 solid 1px;
+          border-radius: 100%;
+          top: -2px;
+          right: -2px;
+          bottom: -2px;
+          left: -2px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.btn {
+  &__about {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    left: 1px;
+    top: -700px;
+    transform: translateX(4px);
+  }
+  &__portfolio {
+    position: relative;
+    left: 1px;
+    /* bottom: 280px; */
+    top: -150px;
+    transform: translateX(2px);
+  }
+  &__contacts {
+    position: relative;
+    /* bottom: 180px; */
+    left: 1px;
+    top: 1px;
+    transform: translateX(2px);
+  }
+  .btn__outline {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    margin: 1px;
+    backface-visibility: hidden;
+    position: relative;
+    &_active {
+        background-color:  rgba(255, 255, 255, 0.65);
+        color: #FFD600;
+        border-radius: 100%;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition-duration: 0.5s;
+        transition-property: top, right, bottom, left;
+      }
+      &:focus:before, &:active:before {
+        border: #FFD600 solid 1px;
+        border-radius: 100%;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+.button {
+  background-color: rgba(255, 255, 255, 0.65);
+  position: relative;
+  top: 180px;
+  left: 120px;
+  width: 9px;
+  height: 9px;
+  border: none;
+  margin-right: 5px;
+  border-radius: 100%;
+  vertical-align: middle;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  color: $text-color;
+  &__first {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    top: 10px;
+    left: 130px;
+  }
+  &__second {
+    left: 110px;
+    top: -140px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #898686;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.5s;
+    transition-property: top, right, bottom, left;
+  }
+  &:focus:before, &:active:before {
+    border: #FFD600 solid 1px;
+    border-radius: 100%;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+  }
+  div {
+    display: block;
+    margin-left: 12px;
+    transform: translateY(-8px);
+  }
+}

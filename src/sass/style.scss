@@ -1,19 +1,21 @@
-
-
 * {
     font-family: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color: $main-color;
+    background-color: #212529;
 }
 
 .container {
     position: absolute;
     margin: 0 auto;
+    width: 1130px;
 }
 
 
-@import 'base/variables';
+@import 'variables.scss';
 @import 'header.scss';
 @import 'buttons.scss';
+@import 'about.scss';
+@import 'portfolio.scss';
+@import 'contacts.scss';
